@@ -8,9 +8,19 @@ margin-left: 1.5rem;
 font-size: 2.25rem;
 
 }
+.btn-group
+{
+    margin: 25% 0%;
+}
+
 .btn-group-vertical
 {
     padding-top: 5%;
+}
+
+.btn{
+height: 150%
+
 }
 .btn-secondary {
   color: #000;
@@ -23,7 +33,7 @@ font-size: 2.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: pink;
+  background-color: #dcf5f3;
   
 }
 .dropdown-menu.show {
@@ -61,5 +71,9 @@ flex:display;
   margin: 2%;
   font-size: 120%; 
     }
+  .dropdown-item img
+  {
+border-radius: 8px;
+  }
  
 
