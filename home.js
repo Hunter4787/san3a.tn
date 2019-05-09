@@ -53,7 +53,7 @@ function surligne(champ, erreur)
 /*se connecter*/
 
 const conct = ()=>{
-  let arr =["macon1", "macon2"," macon3", "plombier1", "plombier2", "plombier3", "menuisier1", "menuisier2", "menuisier3"]
+  let arr =["macon1", "macon2","macon3", "plombier1", "plombier2", "plombier3", "menuisier1", "menuisier2", "menuisier3"]
   let ps = document.querySelector("#user").value
  if (arr.includes(ps)){window.location =`slah/${ps}.html`} 
  else alert("Ce pseudo n'existe pas")
