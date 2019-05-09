@@ -95,5 +95,17 @@ height: 4%;
     border-radius: 10px;
   }
   
+#tr0, #tr1, #tr2{
+  width: 250px;
+  height: 250px;
+}
 
+#trx{
+  margin-left: 8%;
+}
+/* .logo-profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
 

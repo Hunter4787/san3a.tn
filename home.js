@@ -33,9 +33,25 @@ function validateForm() {
     alert("Adresse e-mail non valid")
     return false
   }
+  
 
-  window.location='new.html'
+window.location='new.html'
 }
+
+//local storage function
+
+const callme=()=>{
+
+let globalName = document.querySelector("#userup").value
+sessionStorage.setItem("userName", globalName)
+
+let globalTel = document.querySelector("#tel").value
+sessionStorage.setItem("userTel", globalTel)
+
+let globalLc = document.querySelector("#address").value
+sessionStorage.setItem("userLc", globalLc)
+}
+
 
 const retour = ()=>{
   window.location='./san3aHome.html'
@@ -65,23 +81,10 @@ const search = ()=>{
  else alert("Ce pseudo n'existe pas")
 }
 
-// const imgadd =()=>{
-//   let input = document.getElementById("photo")
-//   let img = document.getElementById("input[type=file]").files[0]
-//  let reader  = new FileReader()
-
-//   reader.addEventListener("load", function () {
-//     input.src = reader.result
-//   }, false)
-
-//   if (img) {
-//     reader.readAsDataURL(file)
-// }
-/*
 function previewFile() {
-  var preview = document.querySelector('img');
-  var file    = document.querySelector('input[type=file]').files[0];
-  var reader  = new FileReader();
+ let preview = document.querySelector('#profile');
+ let file    = document.querySelector('#photo').files[0];
+ let reader  = new FileReader();
 
   reader.addEventListener("load", function () {
     preview.src = reader.result;
@@ -90,4 +93,24 @@ function previewFile() {
   if (file) {
     reader.readAsDataURL(file);
   }
-}*/ 
+  
+}
+function previewWork() {
+
+ let tof= document.querySelector('#trx').files
+ console.log(tof)
+ for(let i in tof){
+  let preview = document.querySelector(`#tr${i}`)
+   let reader  = new FileReader()
+
+  reader.addEventListener("load", function () {
+    preview.src = reader.result;
+
+  }, false);
+
+  if (tof[i]) {
+    reader.readAsDataURL(tof[i]);
+  }
+ }
+ 
+}

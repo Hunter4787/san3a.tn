@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="slah/employee.css">
     <script src='home.js'></script>
     <title>Ajout du nouveau employee</title>
+    
 </head>
 
 <body>
@@ -16,28 +17,28 @@
         <div class="header">
             <a class="retour" href="san3aHome.html"><img class="retour" src="images/Return_Arrow.png"
                     alt="Return Arrow" /></a>
-            <span class="mot_coord"> Coordonnées de Maçon 1</span>
+            <span class="mot_coord"> Coordonnées de <span id="nouveau"></span></span>
             <div class="logo-profile">
-                <input type="file" name="photo" id="photo" onchange="imgadd()">
-                <img id="profile" src="" alt="choisir une image" />
+                <img id="profile" height="200" src="" /><br>
+                <input type="file" name="photo" id="photo" onchange="previewFile()">
             </div>
         </div>
         <div class="coord">
-            <span class="coord_details">NOM : <p id="name"></p></span>
-            <span class="coord_details">Télephone : +216 88 558 855</span>
-            <span class="coord_details">Local : Rue de la république sousse</span>
+            <span class="coord_details">NOM : <span id="nm"></span></span>
+            <span class="coord_details">Télephone : <span id="tlp"></span></span>
+            <span class="coord_details">Local : <span id="strt"></span></span>
             <span class="coord_details">Travaux Effectués </span>
         </div>
 
-        <div class="travaux">
-            <div>
-                <input type="file" name="photo" id="photo" onchange="imgadd()">
-            </div>
-            <img src="" alt="travaux" />
-            <img src="" alt="travaux" />
-            <img src="" alt="travaux" />
 
+        <input type="file" name="photo" id="trx" onchange="previewWork()" multiple />
+        <div class="travaux">
+
+            <img src="" id="tr0" alt="travaux" />
+            <img src="" id="tr1" alt="travaux" />
+            <img src="" id="tr2" alt="travaux" />
         </div>
+
         <div class="footer">
             <div class="logo_footer">
                 <img src="images/facebook.jpg" alt="facebook" />
@@ -61,6 +62,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src='client.js'></script>
+
+        <script>
+                window.onload = function() {
+                    console.log('hello')
+                    document.getElementById('nouveau').innerText = sessionStorage.getItem('userName');
+                    document.getElementById('nm').innerText = sessionStorage.getItem('userName');
+                    document.getElementById('tlp').innerText = sessionStorage.getItem('userTel');
+                    document.getElementById('strt').innerText = sessionStorage.getItem('userLc');
+                };
+        </script>
 
 </body>
