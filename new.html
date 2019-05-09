@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="slah/macon_1.css">
+    <link rel="stylesheet" type="text/css" href="slah/employee.css">
     <script src='home.js'></script>
-    <title>macon 1</title>
+    <title>Ajout du nouveau employee</title>
 </head>
 
 <body>
@@ -18,13 +18,12 @@
                     alt="Return Arrow" /></a>
             <span class="mot_coord"> Coordonnées de Maçon 1</span>
             <div class="logo-profile">
-                <input type="file" name="photo" id="photo">
-                <input type="button" value="ajouter image" onclick="imgadd()">
+                <input type="file" name="photo" id="photo" onchange="imgadd()">
                 <img id="profile" src="" alt="choisir une image" />
             </div>
         </div>
         <div class="coord">
-            <span class="coord_details">NOM : <p id="name">Maçon 1</p></span>
+            <span class="coord_details">NOM : <p id="name"></p></span>
             <span class="coord_details">Télephone : +216 88 558 855</span>
             <span class="coord_details">Local : Rue de la république sousse</span>
             <span class="coord_details">Travaux Effectués </span>
@@ -32,8 +31,7 @@
 
         <div class="travaux">
             <div>
-                <input type="file" name="photo" id="photo">
-                <input type="button" value="ajouter image" onclick="imgadd()">
+                <input type="file" name="photo" id="photo" onchange="imgadd()">
             </div>
             <img src="" alt="travaux" />
             <img src="" alt="travaux" />

@@ -59,9 +59,29 @@ const conct = ()=>{
  else alert("Ce pseudo n'existe pas")
 }
 
-const imgadd =()=>{
-  let input = document.getElementById("photo");
-  let img = document.getElementById("profile");
-  console.log(img)
-  img.src = input.file.getAsDataURL();
-}
+// const imgadd =()=>{
+//   let input = document.getElementById("photo")
+//   let img = document.getElementById("input[type=file]").files[0]
+//  let reader  = new FileReader()
+
+//   reader.addEventListener("load", function () {
+//     input.src = reader.result
+//   }, false)
+
+//   if (img) {
+//     reader.readAsDataURL(file)
+// }
+/*
+function previewFile() {
+  var preview = document.querySelector('img');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+
+  reader.addEventListener("load", function () {
+    preview.src = reader.result;
+  }, false);
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}*/ 
