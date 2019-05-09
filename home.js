@@ -74,11 +74,12 @@ const conct = ()=>{
  if (arr.includes(ps)){window.location =`slah/${ps}.html`} 
  else alert("Ce pseudo n'existe pas")
 }
+
 const search = ()=>{
-  let arr =["macon1", "macon2"," macon3", "plombier1", "plombier2", "plombier3", "menuisier1", "menuisier2", "menuisier3"]
-  let rc = document.querySelector("#search").value
- if (arr.includes(rc)){window.location =`slah/${rc}.html`} 
- else alert("Ce pseudo n'existe pas")
+  let arr =["macon1", "macon2","macon3", "plombier1", "plombier2", "plombier3", "menuisier1", "menuisier2", "menuisier3"]
+  let rc = document.querySelector("#srch").value
+ if (arr.includes(rc)){window.location =`${rc}.html`} 
+ else alert("Cet employee n'existe pas")
 }
 
 function previewFile() {
